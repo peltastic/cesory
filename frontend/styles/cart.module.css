@@ -1,0 +1,45 @@
+@media (max-width: 900px) {
+  .CartContainer {
+    margin: 0 1rem;
+    margin-top: 10rem;
+  }
+}
+
+.Glow {
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 5px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #ffffff,
+    0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff;
+}
+
+@media (max-width: 1000px) {
+  .Cart {
+    width: 48%;
+  }
+}
+
+@media (max-width: 650px) {
+  .Cart {
+    width: 95%;
+  }
+
+  .CartContainer {
+    position: absolute;
+  }
+}
+@media (max-width: 500px) {
+  .Cart {
+    height: 40rem;
+    margin-bottom: 5rem;
+  }
+}
+@media (max-width: 400px) {
+  .CartContainer {
+    margin-top: 15rem;
+  }
+  .Cart {
+    padding: 1rem 1rem;
+  }
+  .Cart img + p {
+    font-size: 1.5rem;
+  }
+}

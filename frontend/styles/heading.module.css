@@ -1,0 +1,35 @@
+@media (max-width: 1200px) {
+  .Heading {
+    display: none;
+  }
+}
+.HeadingLg {
+    display: none;
+}
+@media (max-width: 1200px) {
+    .HeadingLg {
+        display: block;
+    }
+}
+@media (max-width: 600px) {
+    .HeadingLg {
+       display: flex;
+       width: 100%;
+       justify-content: center;
+       margin-left: 1rem
+    }
+}
+
+@media (max-width: 500px) {
+    .HeadingLg {
+        margin-left: 3.3rem;
+    }
+}
+@media (max-width: 400px) {
+    .HeadingLg {
+       display: flex;
+       width: 100%;
+       justify-content: center;
+        margin-left: 2.8rem;
+    }
+}

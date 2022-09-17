@@ -1,0 +1,44 @@
+@media (max-width: 650px) {
+  .Container {
+    margin-top: 12rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .ImageContainer {
+    width: 100%;
+    height: auto;
+    margin-bottom: 4rem;
+  }
+  .ImageContainer div {
+    width: 80%;
+  }
+  .DescContainer {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+  .Footer {
+    position: relative;
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 450px) {
+    .RelatedImages {
+        width: 80px;
+        margin-top: 4rem;
+    }
+    .ImageContainer {
+        width: 90%;
+    }
+    .DescContainer {
+        width: 90%;
+    }
+}
+
+@media (max-width: 350px) {
+    .RelatedImages {
+        width: 60px;
+    }
+}

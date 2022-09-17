@@ -1,0 +1,10 @@
+@media (max-width: 650px) {
+    .Products {
+        justify-content: center;
+    }
+}
+@media (min-width: 1500px) {
+    .Products {
+        margin-left: 10rem;
+    }
+}

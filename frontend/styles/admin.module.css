@@ -1,0 +1,47 @@
+.Welcome {
+  background-image: linear-gradient(105deg, #dc9a74d9, #b3551ee6),
+    url("../assets/admin.jpg");
+  background-size: cover;
+}
+
+.Orders {
+  background-image: linear-gradient(105deg, #242424d9, #000000c8),
+    url("../assets/orders.jpg");
+  background-size: cover;
+}
+
+.Add {
+  background-image: linear-gradient(105deg, #242424d9, #000000c8),
+    url("../assets/addProducts.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 650px) {
+  .Container {
+    margin-top: 8rem;
+  }
+}
+@media (max-width: 650px) {
+  .Container {
+    margin-top: 9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .DashBoard {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .Options {
+    width: 100%;
+  }
+  .Options section {
+    margin-bottom: 2rem;
+  }
+  .Options section div{
+    left: 12rem;
+  }
+}

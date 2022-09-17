@@ -1,0 +1,20 @@
+.NavMobile {
+    display: none;
+  }
+  
+  .NavMobile ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .NavMobile li {
+    margin: 3rem 0;
+    font-size: 2rem;
+  }
+  @media (max-width: 650px) {
+    .NavMobile {
+      display: block;
+    }
+  }

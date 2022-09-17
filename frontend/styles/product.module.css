@@ -1,0 +1,64 @@
+.Image {
+  width: 100%;
+}
+.Glow {
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 5px #fff, 0 0 .5px #fff, 0 0 .5px #fff, 0 0 .5px #ffffff,
+    0 0 1px #ffffff, 0 0 .5px #ffffff, 0 0 .5px #ffffff, 0 0 .5px #ffffff;
+}
+
+@media (max-width: 1100px) {
+  .Product {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 950px) {
+  .Product {
+    width: 45%;
+
+  }
+}
+@media (max-width: 650px) {
+  .Product {
+    width: 60%;
+    margin: 1rem 0;
+    margin-top: 4rem;
+    justify-content: center;
+  }
+}
+@media (max-width: 650px) {
+  .Product {
+    width: 80%;
+    height: 40rem;
+  }
+}
+@media (max-width: 400px) {
+  .Product {
+    width: 95%;
+    height: 40rem;
+  }
+}
+@media (max-width: 1250px) {
+  .ProductLoader {
+    width:45%;
+  }
+}
+
+@media(max-width: 650px) {
+  .ProductLoader {
+    width: 100%;
+  }
+}
+@media(max-width: 600px) {
+  .ProductLoader {
+    margin-left: 10rem;
+  }
+}
+@media(max-width: 450px) {
+  .ProductLoader {
+    margin-left: 5rem;
+  }
+}
+
+
+
