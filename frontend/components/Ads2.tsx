@@ -26,7 +26,7 @@ const Ads2 = (props: Props) => {
             monnths{" "}
           </p>
           <Button
-            class=" text-primary px-[2rem] py-[1rem] my-[2rem] bg-white"
+            class=" text-[#03ab069f] text-2xl font-bold px-[3.6rem] py-[1.2rem] my-[2rem] bg-white"
             content="Shop"
           />
         </div>

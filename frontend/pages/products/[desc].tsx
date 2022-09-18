@@ -25,17 +25,13 @@ import Button from "../../components/Button";
 import Filter from "../../components/Filter";
 import Image from "next/image";
 import Loader from "../../components/Loader";
-// import Featured from "../../components/Categories";
-///test images
-import Img from "../../public/others/iphone 12.png";
-import Img3 from "../../public/others/nubia red magic 6.png";
-import Img5 from "../../public/others/nubia red magic 5s.png";
+import Featured from "../../components/Featured";
+
 
 type Props = {};
 
 function Description({}: Props) {
-  //test images
-  const images = [Img, Img3, Img5];
+
 
   const dispatch = useDispatch();
   const user = useSelector((state: RootState) => state.user.userInfo);
@@ -234,21 +230,7 @@ function Description({}: Props) {
                   />
                 </div>
               ) : null}
-              {/* <div className="ml-10">
-                <Filter
-                  filterOption={{ category: "", type: "" }}
-                  filter_name="Quantity"
-                  filters={["1", "2", "3"]}
-                  class="glow-border"
-                  type="desc"
-                  dropHand={() => {
-                    return;
-                  }}
-                  clicked={() => {
-                    return;
-                  }}
-                />
-              </div> */}
+              
             </div>
           </div>
         </div>
@@ -267,8 +249,8 @@ function Description({}: Props) {
         </div>
       )}
 
-      <div className="flex mt-[4rem]">
-        {/* <Featured /> */}
+      <div className="flex flex-wrap mt-[2rem]">
+        <Featured limit={4} heading="Related Products"  />
       </div>
 
       <div className={`${styles.Footer}  bottom-0 w-full`}>

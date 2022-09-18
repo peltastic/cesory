@@ -23,7 +23,7 @@ const add_product = async (req, res) => {
       message: "uploaded",
     });
   } catch (e) {
-    console.log(e)
+    console.log(e);
     return res.status(500).send({
       message: "could Not send",
       err: e,
@@ -46,11 +46,12 @@ const get_product = async (req, res) => {
 };
 const get_products = async (req, res) => {
   const category = req.query.category || "";
+  const product_name = req.query.name || "";
   const limit = req.query.limit || null;
   const offset = req.query.offset || null;
   let products;
-  if (category) {
-    products = await executeSpecificQuery(category);
+  if (category || product_name) {
+    products = await executeSpecificQuery(category, product_name);
   } else {
     products = await DB.Product.findAll({ offset: offset, limit: limit });
   }
@@ -69,11 +70,17 @@ const delete_product = async (req, res) => {
 };
 
 //funcs
-async function executeSpecificQuery(category) {
-  // const logic = category && type ? "and" : "or";
+async function executeSpecificQuery(category, name) {
+  let logic = "and";
+  if (!category || !name) {
+    logic = "or";
+  }
+  if (!name) {
+    logic = "and";
+  }
   const products = await DB.Product.findAll({
     where: {
-      category: category,
+      [Op[logic]]: [{ category: category }, { name: { [Op.substring]: name } }],
     },
   });
   return products;

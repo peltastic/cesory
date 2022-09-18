@@ -12,9 +12,9 @@ export default function Messages(props: Props) {
     <Link href={baseUrl + props.link}>
       <a>
         <div
-          className={`fixed bottom-[1rem] cursor-pointer right-0 ${props.className} w-[20rem] z-50 px-8 py-[3rem] ${classes.Messages}`}
+          className={`fixed bottom-[1rem] cursor-pointer right-0 ${props.className} w-[20rem] z-50 px-8 py-[2rem] ${classes.Messages}`}
         >
-          <h1 className="mx-auto text-center glow text-white text-4xl">
+          <h1 className="mx-auto text-center  text-white text-4xl">
             {props.name}
           </h1>
         </div>

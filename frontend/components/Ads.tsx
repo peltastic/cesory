@@ -25,7 +25,7 @@ const Ads = (props: Props) => {
             Company that's grown from 270 to 480 employees in <br /> the last 12
             monnths{" "}
           </p>
-          <Button class=" text-primary px-[2rem] py-[1rem] my-[2rem] bg-white" content="Shop" />
+          <Button class=" text-primary px-[3.6rem] py-[1.2rem] my-[2rem] text-2xl font-bold bg-white" content="Shop" />
         </div>
       </div>
     </section>

@@ -1,5 +1,3 @@
-import Logo from "../assets/logo.svg";
-import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineShopping } from "react-icons/ai";
 import { BiUserCircle } from "react-icons/bi";
@@ -27,6 +25,7 @@ function Nav(props: Props) {
   const [showUserOp, setShowUserOp] = useState<boolean>(false);
   const [showMessage, setShowMessage] = useState<boolean>(false);
   const [showNav, setShowNav] = useState<boolean>(false);
+  const [active, setActive] = useState<string>("home");
 
   const logout = () => {
     sessionStorage.removeItem("token");
@@ -58,7 +57,7 @@ function Nav(props: Props) {
   return (
     <>
       {showMessage ? (
-        <Messages className=" bg-[#ffffff]" name="Sign In" link="/login" />
+        <Messages className=" bg-[#e84949]" name="Login" link="/login" />
       ) : null}
       <div
         className={`${classes.NavMobileIcon}  z-[80]`}
@@ -76,6 +75,15 @@ function Nav(props: Props) {
         clicked={() => setShowNav(!showNav)}
       />
       {showNav ? <Backdrop /> : null}
+      <div
+        className={`${classes.CartMobile} z-[50] fixed top-[4rem] right-[3rem] cursor-pointer`}
+        onClick={cartHandler}
+      >
+        <AiOutlineShopping className={`  text-6xl   text-black`} />
+        <div className="h-[1.5rem] w-[1.5rem] flex justify-center items-center absolute top-[-4px] right-[-4px] px-[.5px] py-[.5px] rounded-full">
+          <p className=" text-xl text-black text-center">{cartCount || 0}</p>
+        </div>
+      </div>
       <nav
         className={`${classes.Nav} w-full  px-16 py-8  flex items-center text-black fixed top-0 left-0 z-20 bg-[#fffdfd]`}
       >
@@ -83,14 +91,27 @@ function Nav(props: Props) {
         <ul className="flex text-[1.3rem] mt-[.5rem] mr-auto text-[#b8b8b8]">
           <li className="mr-[1rem]">
             <Link href={"/"}>
-              <a className="text-black">Home</a>
+              <a
+                className={`${active === "home" ? "text-black" : null}`}
+                onClick={() => setActive("home")}
+              >
+                Home
+              </a>
             </Link>
           </li>
 
           <li className="mr-[1rem]">
             <Link href={"/products"}>
-              <a>Shop</a>
+              <a
+                className={`${active === "shop" ? "text-black" : null}`}
+                onClick={() => setActive("shop")}
+              >
+                Shop
+              </a>
             </Link>
+          </li>
+          <li className="mr-[1rem]">
+            <p className={`${active === "featured"? "text-black" : null}`} onClick={() => setActive("featured")}>Featured</p>
           </li>
           <li className="mr-[1rem]">About Us</li>
           <li className="mr-[1rem]">Contact</li>
@@ -98,7 +119,9 @@ function Nav(props: Props) {
         <div className="flex items-center"></div>
         {!userData.userId ? (
           <Link href={"/login"}>
-            <a className="mr-[3rem] text-[1.2rem] text-black font-bold">LOGIN</a>
+            <a className="mr-[3rem] text-[1.2rem] text-black font-bold">
+              LOGIN
+            </a>
           </Link>
         ) : null}
         {userData.username ? (
@@ -112,9 +135,9 @@ function Nav(props: Props) {
               <IoIosArrowDown className="ml-4" />
             </div>
             <div
-              className={`transition-all bg-white absolute  ${
-                showUserOp ? "max-h-16" : "max-h-0"
-              }   text-center text-[1.2rem] -bottom-[100%] w-full `}
+              className={`transition-all bg-[#544747] text-white absolute  ${
+                showUserOp ? "max-h-[20rem] py-[1rem]" : "max-h-0"
+              }   text-center text-[1.2rem] top-[100%] w-full `}
             >
               <ul className={`${showUserOp ? "block" : "hidden"}`}>
                 <li>
@@ -123,16 +146,16 @@ function Nav(props: Props) {
                     <Link href={"/admin"}>
                       <a>
                         <button
-                          className={`mr-10 text-2xl rounded-full px-6 py-2 ${classes.Admin}`}
+                          className={` font-bold py-1 rounded-full `}
                         >
-                          Admin
+                          ADMIN
                         </button>
                       </a>
                     </Link>
                   ) : null}
                 </li>
                 <li>
-                  <button className="font-bold" onClick={logout}>
+                  <button className="font-bold py-1" onClick={logout}>
                     LOGOUT
                   </button>
                 </li>

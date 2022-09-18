@@ -6,7 +6,6 @@ import { useDispatch } from "react-redux";
 import { RootState } from "../redux/store";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import classes from "../styles/cart.module.css";
 import { useRouter } from "next/router";
 import { splitNumber } from "../utils/functions";
 import { incrementCheckout, decrementCheckout } from "../redux/reducers/cart";
@@ -114,33 +113,47 @@ function Cart(props: Props) {
   };
   return (
     <div className=" flex items-end mb-10">
-      <div className="relative  rounded-3xl mr-8 w-[25rem] h-[25rem] bg-gradient-to-br from-[#cacaca] to-[#ebebeb]">
+      <div onClick={clickHandler} className="relative cursor-pointer rounded-3xl mr-8 w-[25rem] h-[25rem] bg-gradient-to-br from-[#cacaca] to-[#ebebeb]">
         <div className="center w-[25rem]">
-          <Image src={TestImg} />
+          <img src={props.image} />
         </div>
       </div>
       <div className="">
         <div className="flex py-4 text-black -ml-2">
-          <Button
-            clicked={increaseCartHandler}
-            content={<MdAdd />}
-            class=" text-3xl mr-2 text-black"
-          />
           <Button
             clicked={decreaseCartHandler}
             disabled={currentCount === 0}
             content={<AiOutlineMinus />}
             class="text-3xl text-black"
           />
+          <Button
+            clicked={increaseCartHandler}
+            content={<MdAdd />}
+            class=" text-3xl mr-2 text-black"
+          />
         </div>
         <p className="py-4 text-xl ">{currentCount}</p>
         <h1 className="font-bold text-2xl  py-4">{props.name}</h1>
-        <p className="font-bold text-2xl py-4">
-          $
-          {totalPrice
-            ? splitNumber(totalPrice || 0)
-            : splitNumber(props.total_price || 0)}
-        </p>
+        <div className="flex items-center">
+          <p className="font-bold mr-6 text-2xl py-4">
+            $
+            {totalPrice
+              ? splitNumber(totalPrice || 0)
+              : splitNumber(props.total_price || 0)}
+          </p>
+          <button
+            onClick={() =>
+              props.deleteCart(
+                userId,
+                props.cartId,
+                totalPrice || props.total_price
+              )
+            }
+            className=""
+          >
+            <AiFillDelete className="text-3xl text-black" />
+          </button>
+        </div>
       </div>
     </div>
     // <div

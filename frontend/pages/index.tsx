@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       {/* <Featured heading="Featured Products" limit={3} /> */}
       <Categories />
       <Ads />
-      <Featured />
+      <Featured limit={4} heading="Featured Products" />
       <Ads2 />
       {/* <Body /> */}
       <Footer />

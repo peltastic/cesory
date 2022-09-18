@@ -13,7 +13,7 @@ const Filter = (props: Props) => {
     <button
       className={`${props.class} 
      
-      rounded-full  px-[1rem] py-2 text-2xl transition-all text-black`}
+      rounded-full  px-[.8rem] xs:px-[1rem]  py-2 text-xl xs:text-2xl transition-all text-black`}
       onClick={() => props.clicked(props.filter_name.toLowerCase())}
     >
       {props.filter_name}

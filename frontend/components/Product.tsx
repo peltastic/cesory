@@ -14,10 +14,7 @@ import {
   checkCart,
 } from "../api/requests/cart";
 import { AiOutlineMinus } from "react-icons/ai";
-import classes from "../styles/product.module.css";
 import Button from "../components/Button";
-import TestImg from "../assets/header.png";
-import Image from "next/image";
 
 type Props = {
   name: string;
@@ -124,7 +121,7 @@ function Product(props: Props) {
           onClick={() => router.push(`/products/${props.id}`)}
           className="relative rounded-3xl  bg-gradient-to-br from-[#cacaca] to-[#ebebeb] h-[25rem] xs:h-[20rem] "
         >
-          <div className="center w-[20rem]">
+          <div className="center w-[15rem]">
             <img src={props.image} />
           </div>
         </div>
@@ -133,7 +130,10 @@ function Product(props: Props) {
           <div className="text-black mr-auto">
             <p className="text-xl my-2">{props.name}</p>
             <p className="font-bold text-xl">
-              ${totalPrice ? splitNumber(totalPrice || 0) : splitNumber(props.price || 0)}
+              $
+              {totalPrice
+                ? splitNumber(totalPrice || 0)
+                : splitNumber(props.price || 0)}
             </p>
           </div>
           {cartCount ? (
@@ -154,25 +154,7 @@ function Product(props: Props) {
           ) : null}
         </div>
       </div>
-      {/* <div
-        className={`${classes.Product} ${classes.Glow}  mb-11 p-2 w-[30%] h-[35rem] cursor-pointer border-[2px] text-black border-[#ffffff3c] relative mx-4 ml-10`}
-      >
-        <div className={`border-white py-8 h-full w-full border `}>
-          <div
-            className="h-[70%] "
-            onClick={() => router.push(`/products/${props.id}`)}
-          >
-            <img src={props.image} className="h-full mx-auto block" />
-          </div>
-          <h1 className="text-center mt-[2rem] text-2xl">{props.name}</h1>
-          <div className=" w-full text-[1.5rem] flex absolute justify-center bottom-0 left-0 px-6 py-4 ">
-            <p className={`${cartCount ? "mr-auto" : null}`}>
-              ${totalPrice ? splitNumber(totalPrice) : splitNumber(props.price)}
-            </p>
-            
-          </div>
-        </div>
-      </div> */}
+     
     </>
   );
 }

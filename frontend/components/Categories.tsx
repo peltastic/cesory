@@ -10,15 +10,9 @@ import LaptopImg from "../assets/cat/laptops.png";
 import GamingImg from "../assets/cat/gaming.png";
 import SpeakerImg from "../assets/cat/speaker.png";
 import Image from "next/image";
-import Featured from "../components/Featured"
 
-type Props = {
-  // offset?: number;
-  // limit?: number;
-  // heading: string;
-};
 
-const Categories = (props: Props) => {
+const Categories = () => {
   return (
     <section className="flex flex-wrap bp2:flex-nowrap w-full">
       <div className="w-[100%] bp2:w-[50%] mt-10 flex flex-wrap bp6:mr-4">
@@ -33,7 +27,7 @@ const Categories = (props: Props) => {
               <p className="my-1 text-3xl">With</p>
               <p className="text-5xl bp1:text-6xl font-bold opacity-25 my-2">EARPHONE</p>
               <Button
-                class="bg-primary my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
+                class="bg-primary font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
                 content="Browse"
               />
             </div>
@@ -49,7 +43,7 @@ const Categories = (props: Props) => {
                 WATCHES
               </p>
               <Button
-                class="bg-white text-[#ffd000] my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
+                class="bg-white text-[#ffd000] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
                 content="Browse"
               />
             </div>
@@ -66,7 +60,7 @@ const Categories = (props: Props) => {
               MOBILES
             </p>
             <Button
-              class="bg-white text-[#ffd000] my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
+              class="bg-primary font-bold text-[#cacaca] my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
               content="Browse"
             />
           </div>
@@ -84,7 +78,7 @@ const Categories = (props: Props) => {
               LAPTOPS
             </p>
             <Button
-              class="bg-white text-[#ffd000] my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem]  text-xl" 
+              class="bg-white text-[#d20303] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem]  text-xl" 
               content="Browse"
             />
           </div>
@@ -101,7 +95,7 @@ const Categories = (props: Props) => {
                 HEADPHONES
               </p>
               <Button
-                class="bg-white text-[#ffd000] my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem]  text-xl"
+                class="bg-white text-[#03c806] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem]  text-xl"
                 content="Browse"
               />
             </div>
@@ -117,7 +111,7 @@ const Categories = (props: Props) => {
                 SPEAKER
               </p>
               <Button
-                class="bg-white text-[#ffd000] my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
+                class="bg-white text-[#2565c6] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
                 content="Browse"
               />
             </div>
