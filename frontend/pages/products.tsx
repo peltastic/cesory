@@ -60,7 +60,7 @@ function Products() {
   };
   return (
     <>
-      <div className="mt-[10rem] mb-4 md:mb-0 md:mt-0 md:fixed bg-white z-[50] bg-transparent md:top-[8rem] w-full">
+      <div className="mt-[10rem] mb-4 md:mb-0 md:mt-0 md:fixed bg-transparent md:bg-white z-[50]  md:top-[7rem]   w-full">
         <div className="flex justify-center">
           <div className="w-[90%]  md:w-[70%] bp3:w-[70%] bp2:w-[50%] relative md:-ml-12 xs:ml-0">
             <Search
@@ -116,11 +116,9 @@ function Products() {
               })}
             </>
           ) : (
-            <div className="fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+            <div className="fixed top-[60%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
               <ProductLoader />
-              <p className="text-center -ml-[4rem] mt-8 glow text-xl">
-                Loading...
-              </p>
+              <p className="text-center  mt-8 text-xl">Loading...</p>
             </div>
           )}
         </div>
