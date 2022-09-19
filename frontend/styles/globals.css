@@ -13,11 +13,6 @@
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #b3541e;
   }
-  .glow {
-    color: #e7e4e4;
-    text-shadow: 0 0 5px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #ffffff,
-      0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff;
-  }
   .glow-border {
     border: #e7e4e4;
     box-shadow: 0 0 4px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #ffffff,
