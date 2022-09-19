@@ -22,8 +22,8 @@ const Ads = (props: Props) => {
           <p>Cesory</p>
           <p className="text-[3rem] md:text-[5rem]">Summer Sale</p>
           <p>
-            Company that's grown from 270 to 480 employees in <br /> the last 12
-            monnths{" "}
+            Company thats grown from 270 to 480 employees in <br /> the last 12
+            monnths
           </p>
           <Button class=" text-primary px-[3.6rem] py-[1.2rem] my-[2rem] text-2xl font-bold bg-white" content="Shop" />
         </div>

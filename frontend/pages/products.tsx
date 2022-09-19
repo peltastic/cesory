@@ -74,7 +74,6 @@ function Products() {
           </div>
         </div>
       </div>
-      '
       <div className="eqeeq">
         <div className="flex md:mt-[15rem] justify-center mb-[2rem] items-center ">
           {categories.map((el, index) => {

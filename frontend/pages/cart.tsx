@@ -43,12 +43,12 @@ function Carts({}: Props) {
       refetchOnWindowFocus: false,
     }
   );
-  // useEffect(() => {
-  //   if (userId) {
-  //     token = sessionStorage.getItem("token");
-  //     refetch();
-  //   }
-  // }, [userId]);
+  useEffect(() => {
+    if (userId) {
+      token = sessionStorage.getItem("token");
+      refetch();
+    }
+  }, [userId]);
 
   const checkoutSum = (data: any[]): number => {
     let sum: number = 0;
