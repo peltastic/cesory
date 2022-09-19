@@ -1,7 +1,3 @@
-import Product from "./Product";
-import { useEffect, useState } from "react";
-import { useQuery } from "react-query";
-import { getProducts } from "../api/requests/product";
 import Button from "./Button";
 import EarphoneImg from "../assets/cat/earphones.png";
 import HeadphoneImg from "../assets/cat/headphones.png";
@@ -10,7 +6,7 @@ import LaptopImg from "../assets/cat/laptops.png";
 import GamingImg from "../assets/cat/gaming.png";
 import SpeakerImg from "../assets/cat/speaker.png";
 import Image from "next/image";
-
+import Link from "next/link";
 
 const Categories = () => {
   return (
@@ -25,11 +21,17 @@ const Categories = () => {
             <div className="absolute left-[3rem] bottom-[3rem]">
               <p className="my-1">Enjoy</p>
               <p className="my-1 text-3xl">With</p>
-              <p className="text-5xl bp1:text-6xl font-bold opacity-25 my-2">EARPHONE</p>
-              <Button
-                class="bg-primary font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
-                content="Browse"
-              />
+              <p className="text-5xl bp1:text-6xl font-bold opacity-25 my-2">
+                EARPHONE
+              </p>
+              <Link href={"/products"}>
+                <a>
+                  <Button
+                    class="bg-primary font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
+                    content="Browse"
+                  />
+                </a>
+              </Link>
             </div>
           </div>
           <div className="text-white relative xs:ml-4 xs:my-0 my-3 w-full xs:w-[51%] bp2:w-[48%] bg-gradient-to-br from-[#efc408] to-[#ffd000]  rounded-3xl h-[30rem]">
@@ -42,10 +44,14 @@ const Categories = () => {
               <p className="text-5xl bp1:text-6xl font-bold opacity-25 my-2 text-white">
                 WATCHES
               </p>
-              <Button
-                class="bg-white text-[#ffd000] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
-                content="Browse"
-              />
+              <Link href={"/products"}>
+                <a>
+                  <Button
+                    class="bg-white text-[#ffd000] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
+                    content="Browse"
+                  />
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -59,10 +65,14 @@ const Categories = () => {
             <p className=" text-5xl bp1:text-6xl font-bold opacity-80 my-2 text-white">
               MOBILES
             </p>
-            <Button
-              class="bg-primary font-bold text-[#cacaca] my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
-              content="Browse"
-            />
+            <Link href={"/products"}>
+              <a>
+                <Button
+                  class="bg-primary font-bold text-[#cacaca] my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
+                  content="Browse"
+                />
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -77,10 +87,14 @@ const Categories = () => {
             <p className="text-5xl bp1:text-6xl font-bold opacity-25 my-2 text-white">
               LAPTOPS
             </p>
-            <Button
-              class="bg-white text-[#d20303] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem]  text-xl" 
-              content="Browse"
-            />
+            <Link href={"/products"}>
+              <a>
+                <Button
+                  class="bg-white text-[#d20303] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem]  text-xl"
+                  content="Browse"
+                />
+              </a>
+            </Link>
           </div>
         </div>
         <div className="w-full flex flex-wrap xs:flex-nowrap">
@@ -94,10 +108,14 @@ const Categories = () => {
               <p className="text-5xl bp1:text-6xl font-bold opacity-25 my-2 text-white">
                 HEADPHONES
               </p>
-              <Button
-                class="bg-white text-[#03c806] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem]  text-xl"
-                content="Browse"
-              />
+              <Link href={"/products"}>
+                <a>
+                  <Button
+                    class="bg-white text-[#03c806] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem]  text-xl"
+                    content="Browse"
+                  />
+                </a>
+              </Link>
             </div>
           </div>
           <div className="text-white my-3 xs:my-0 relative xs:ml-4 w-full xs:w-[48%] bg-gradient-to-br from-[#2565c6] to-[#3873cb] rounded-3xl h-[30rem]">
@@ -110,10 +128,14 @@ const Categories = () => {
               <p className="text-5xl bp1:text-6xl font-bold opacity-25 my-2 text-white">
                 SPEAKER
               </p>
-              <Button
-                class="bg-white text-[#2565c6] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
-                content="Browse"
-              />
+              <Link href={"/products"}>
+                <a>
+                  <Button
+                    class="bg-white text-[#2565c6] font-bold my-3 px-[2.8rem] bp1:px-[3.6rem] py-[.8rem] bp1:py-[1.2rem] text-xl"
+                    content="Browse"
+                  />
+                </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -27,12 +27,9 @@ import Image from "next/image";
 import Loader from "../../components/Loader";
 import Featured from "../../components/Featured";
 
-
 type Props = {};
 
 function Description({}: Props) {
-
-
   const dispatch = useDispatch();
   const user = useSelector((state: RootState) => state.user.userInfo);
   const token = useSelector((state: RootState) => state.user.token);
@@ -182,12 +179,14 @@ function Description({}: Props) {
     }
   };
 
+  const offsetStart = Math.floor(Math.random() * (10 + 1));
+
   return (
     <>
       {showMessage ? (
         <Messages className=" bg-[#000]" name="Sign In" link="/login" />
       ) : null}
-      {!productQuery.isLoading ? (
+      {data ? (
         <div
           className={`text-black mt-[12rem] mx-auto w-[90%] max-w-[800px] flex flex-wrap ${styles.Container}`}
         >
@@ -198,10 +197,10 @@ function Description({}: Props) {
           </div>
 
           <div className={`${styles.DescContainer} w-[50%] relative`}>
-            <h1 className="text-3xl mb-6 glow">{data?.name}</h1>
+            <h1 className="text-3xl mb-6 font-bold glow">{data?.name}</h1>
             <p className="text-xl">{data?.desc}</p>
-            <p className="my-8 text-xl">
-              N
+            <p className="my-8 text-2xl">
+              $
               {totalPrice ? splitNumber(totalPrice) : splitNumber(initialPrice)}
             </p>
             <p className="text-xl">{data?.product_brand}</p>
@@ -209,7 +208,7 @@ function Description({}: Props) {
               {cartCount < 1 ? (
                 <button
                   onClick={addCartHandler}
-                  className="border glow-border px-10 py-2"
+                  className=" bg-primary text-white  rounded-full text-2xl px-10 py-2"
                 >
                   Add to cart
                 </button>
@@ -230,7 +229,6 @@ function Description({}: Props) {
                   />
                 </div>
               ) : null}
-              
             </div>
           </div>
         </div>
@@ -250,7 +248,7 @@ function Description({}: Props) {
       )}
 
       <div className="flex flex-wrap mt-[2rem]">
-        <Featured limit={4} heading="Related Products"  />
+        <Featured offset={offsetStart} limit={4} heading="Related Products" />
       </div>
 
       <div className={`${styles.Footer}  bottom-0 w-full`}>

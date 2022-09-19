@@ -2,6 +2,7 @@ import React from "react";
 import AdsImg from "../assets/watch.png";
 import Button from "./Button";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {};
 
@@ -14,8 +15,12 @@ const Ads2 = (props: Props) => {
         </div>
         <div className="text-white w-full bp6:w-auto py-[3rem] bp6:py-0  mr-auto">
           <p className="opacity-80 ml-2">20% off</p>
-          <p className="font-bold text-[6rem] xs:text-[7rem] md:text-[8rem] bp5:text-[10rem] bp5:-mt-[2rem]">HAPPY</p>
-          <p className="font-bold text-[6rem] xs:text-[7rem] md:text-[8rem] bp5:text-[10rem] -mt-[2rem] xs:-mt-[4rem] bp5:-mt-[6rem]">HOURS</p>
+          <p className="font-bold text-[6rem] xs:text-[7rem] md:text-[8rem] bp5:text-[10rem] bp5:-mt-[2rem]">
+            HAPPY
+          </p>
+          <p className="font-bold text-[6rem] xs:text-[7rem] md:text-[8rem] bp5:text-[10rem] -mt-[2rem] xs:-mt-[4rem] bp5:-mt-[6rem]">
+            HOURS
+          </p>
           <p className="opacity-80 xs:-mt-[2rem] ml-2">10 Jul - 15 Dec</p>
         </div>
         <div className="text-white w-full bp6:w-auto py-[3rem] bp6:py-0">
@@ -25,10 +30,14 @@ const Ads2 = (props: Props) => {
             Company thats grown from 270 to 480 employees in <br /> the last 12
             monnths
           </p>
-          <Button
-            class=" text-[#03ab069f] text-2xl font-bold px-[3.6rem] py-[1.2rem] my-[2rem] bg-white"
-            content="Shop"
-          />
+          <Link href={"/products"}>
+            <a>
+              <Button
+                class=" text-[#03ab069f] text-2xl font-bold px-[3.6rem] py-[1.2rem] my-[2rem] bg-white"
+                content="Shop"
+              />
+            </a>
+          </Link>
         </div>
       </div>
     </section>

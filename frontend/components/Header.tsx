@@ -1,14 +1,9 @@
-import { useEffect } from "react";
-import classes from "../styles/header.module.css";
-import Link from "next/link";
-import { motion, useAnimation } from "framer-motion";
 import Button from "./Button";
 import HeroImg from "../assets/header.png";
 import Image from "next/image";
+import Link from "next/link";
 
 function Header() {
-
-
   return (
     <header className=" h-[90vh] mt-[1rem] md:mt-[5rem] rounded-3xl bg-gradient-to-br from-[#cacaca] to-[#ebebeb]">
       <div className="w-full px-[4rem] bp6:px-[8rem] bp2:px-[15rem]  center -mt-[3rem] md:mt-[3rem]">
@@ -24,10 +19,14 @@ function Header() {
           <Image src={HeroImg} alt="hero" />
         </div>
         <div className=" mt-[7rem] bg5:mt-[5rem] flex flex-wrap items-center">
-          <Button
-            class="text-white bg-primary px-[2.4rem] sm:px-[3.6rem] bp2:px-[5.4rem] mr-auto py-[.8rem] sm:py-[1.2rem] bp2:py-[1.8rem] text-3xl"
-            content="Shop Now"
-          />
+          <Link href={"/products"}>
+            <a className="mr-auto">
+              <Button
+                class="text-white bg-primary px-[2.4rem] sm:px-[3.6rem] bp2:px-[5.4rem]  py-[.8rem] sm:py-[1.2rem] bp2:py-[1.8rem] text-3xl"
+                content="Shop Now"
+              />
+            </a>
+          </Link>
           <p className="text-[#707070] w-full sm:w-auto text-xl text-left sm:text-right mt-[3rem] sm:mt-0">
             Buy Tech accessories for your devices,
             <br />

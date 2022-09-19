@@ -25,7 +25,6 @@ function Nav(props: Props) {
   const [showUserOp, setShowUserOp] = useState<boolean>(false);
   const [showMessage, setShowMessage] = useState<boolean>(false);
   const [showNav, setShowNav] = useState<boolean>(false);
-  const [active, setActive] = useState<string>("home");
 
   const logout = () => {
     sessionStorage.removeItem("token");
@@ -40,12 +39,6 @@ function Nav(props: Props) {
     dispatch(setInitialCartCount(0));
     router.push("/");
   };
-
-  useEffect(() => {
-    if (props.admin) {
-      console.log(props.admin);
-    }
-  }, [props.admin]);
 
   const cartHandler = () => {
     if (userData.userId) {
@@ -92,8 +85,7 @@ function Nav(props: Props) {
           <li className="mr-[1rem]">
             <Link href={"/"}>
               <a
-                className={`${active === "home" ? "text-black" : null}`}
-                onClick={() => setActive("home")}
+                className={`${router.pathname === "/" ? "text-black" : null}`}
               >
                 Home
               </a>
@@ -103,15 +95,14 @@ function Nav(props: Props) {
           <li className="mr-[1rem]">
             <Link href={"/products"}>
               <a
-                className={`${active === "shop" ? "text-black" : null}`}
-                onClick={() => setActive("shop")}
+                className={`${router.pathname === "/products" ? "text-black" : null}`}
               >
                 Shop
               </a>
             </Link>
           </li>
           <li className="mr-[1rem]">
-            <p className={`${active === "featured"? "text-black" : null}`} onClick={() => setActive("featured")}>Featured</p>
+            <p>Featured</p>
           </li>
           <li className="mr-[1rem]">About Us</li>
           <li className="mr-[1rem]">Contact</li>

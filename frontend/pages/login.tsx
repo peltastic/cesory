@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import { setToken } from "../redux/reducers/user";
 import { useDispatch } from "react-redux";
 import Input from "../components/Input";
-import classes from "../styles/login.module.css";
 import Button from "../components/Button";
 
 type Props = {};
@@ -161,10 +160,10 @@ const Login: NextPage = ({}: Props) => {
   }
   return (
     <div className=" mt-[15rem]  flex justify-center text-white ">
-      <div className={` relative h-[50rem] w-[50%] px-8 my-auto`}>
-        <div className=" absolute top-0 left-[50%] -translate-x-[50%] flex justify-center ">
+      <div className={` relative h-[50rem] w-[100%] bp6:w-[80%] bp3:w-[50%] px-8 my-auto`}>
+        <div className="  absolute top-0 left-[50%] -translate-x-[50%] flex justify-center ">
           <button
-            className={` text-black text-2xl sm:text-base px-6 py-3${
+            className={` text-black text-xl sm:text-base px-6 py-3${
               isLogin ? activeStyle : null
             }`}
             onClick={() => setIsLogin(true)}
@@ -180,7 +179,7 @@ const Login: NextPage = ({}: Props) => {
             SIGN UP
           </button>
         </div>
-        <div className=" mt-[5rem] border px-6 py-11">
+        <div className=" mt-[7rem] bp6:mt-[5rem] border px-6 py-11">
           <div className="text-center text-black text-4xl mb-[6rem]">
             {isLogin ? (
               <h1 className="">Login Into you Account</h1>
