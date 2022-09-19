@@ -15,7 +15,7 @@ const sign_user_up = async (req, res) => {
   if (password.length < 6) {
     return res.status(400).json({ error: "Password too short" });
   }
-  // try {
+  try {
     const user_email = await DB.sequelize.query("SELECT email FROM users", {
       type: QueryTypes.SELECT,
     });
@@ -32,9 +32,9 @@ const sign_user_up = async (req, res) => {
       user_role: roles.Roles["User"],
       cart_count: 0
     });
-  // } catch (err) {
-  //   return res.status(400).json({ error: err });
-  // }
+  } catch (err) {
+    return res.status(400).json({ error: err });
+  }
   return res.status(200).json("success");
 };
 

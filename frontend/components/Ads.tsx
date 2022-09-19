@@ -15,7 +15,7 @@ const Ads = (props: Props) => {
         <div className="text-white w-full bp6:w-auto py-[3rem] bp6:py-0 mr-auto">
           <p className="opacity-80 ml-2">20% off</p>
           <p className="font-bold text-[6rem] xs:text-[8rem] md:text-[10rem] bp5:-mt-[2rem]">FINE</p>
-          <p className="font-bold text-[6rem] xs:text-[8rem] md:text-[10rem] -mt-[3rem] xs:-mt-[4rem] bp5:-mt-[6rem]">SMILE</p>
+          <p className="font-bold text-[6rem] xs:text-[8rem] md:text-[10rem] -mt-[2rem] xs:-mt-[4rem] bp5:-mt-[4rem]">SMILE</p>
           <p className="opacity-80 xs:-mt-[2rem] ml-2">10 Jul - 15 Dec</p>
         </div>
         <div className="text-white w-[full] bp6:w-[30%] py-[3rem] bp6:py-0">

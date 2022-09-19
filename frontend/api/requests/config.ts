@@ -1,6 +1,6 @@
 import axios from "axios";
-// export const baseUrl: string = "https://techstore7.herokuapp.com";
-export const baseUrl: string = "http://localhost:8000";
+export const baseUrl: string = "https://cesory.herokuapp.com";
+// export const baseUrl: string = "http://localhost:8000";
 
 export const privateInstance = axios.create({
   baseURL: baseUrl,
