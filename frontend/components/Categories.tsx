@@ -8,12 +8,14 @@ import SpeakerImg from "../assets/cat/speaker.png";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const Categories = () => {
+  
   return (
     <section className="flex flex-wrap bp2:flex-nowrap w-full">
       <div className="w-[100%] bp2:w-[50%] mt-10 flex flex-wrap bp6:mr-4">
-        <div className="w-full flex flex-wrap xs:flex-nowrap mb-8">
-          <div className="relative my-3 xs:my-0 text-white bp2:mr-4 w-full xs:w-[51%] bp2:w-[48%] bg-gradient-to-br from-[#000000] to-[#3b3b3b] rounded-3xl h-[30rem]">
+        <div  className="w-full flex flex-wrap xs:flex-nowrap mb-8">
+          <div data-aos="zoom-in" className="relative my-3 xs:my-0 text-white bp2:mr-4 w-full xs:w-[51%] bp2:w-[48%] bg-gradient-to-br from-[#000000] to-[#3b3b3b] rounded-3xl h-[30rem]">
             <div className="w-[30rem] absolute right-[-1rem]">
               <Image src={EarphoneImg} />
             </div>
@@ -77,7 +79,7 @@ const Categories = () => {
         </div>
       </div>
       <div className=" w-[100%] bp2:w-[50%] mt-10 flex flex-wrap bp2:ml-4">
-        <div className="text-white relative w-full mb-8 bg-gradient-to-br from-[#d20303] to-[#ea4444] rounded-3xl h-[30rem]">
+        <div data-aos="zoom-in" className="text-white relative w-full mb-8 bg-gradient-to-br from-[#d20303] to-[#ea4444] rounded-3xl h-[30rem]">
           <div className="w-[30rem] sm:w-[35rem] absolute right-0 sm:right-[2rem]">
             <Image src={LaptopImg} />
           </div>

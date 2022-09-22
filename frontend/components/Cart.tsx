@@ -9,8 +9,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { splitNumber } from "../utils/functions";
 import { incrementCheckout, decrementCheckout } from "../redux/reducers/cart";
-import TestImg from "../assets/header.png";
-import Image from "next/image";
 import Button from "./Button";
 
 type Props = {
@@ -113,8 +111,11 @@ function Cart(props: Props) {
   };
   return (
     <div className=" flex items-end mb-10">
-      <div onClick={clickHandler} className="relative cursor-pointer rounded-3xl mr-8 w-[25rem] h-[25rem] bg-gradient-to-br from-[#cacaca] to-[#ebebeb]">
-        <div className="center w-[25rem]">
+      <div
+        onClick={clickHandler}
+        className="relative cursor-pointer rounded-3xl mr-8 w-[20rem] sm:w-[25rem] h-[20rem] sm:h-[25rem] bg-gradient-to-br from-[#cacaca] to-[#ebebeb]"
+      >
+        <div className="center w-[14rem] sm:w-[18rem]">
           <img src={props.image} />
         </div>
       </div>
@@ -156,57 +157,6 @@ function Cart(props: Props) {
         </div>
       </div>
     </div>
-    // <div
-    //   className={`relative ${classes.Cart} ${classes.Glow} w-[30%] h-[35rem]  mx-auto text-white mb-14 flex flex-col items-center border  px-16 py-12`}
-    // >
-    //   <button
-    //     onClick={() =>
-    //       props.deleteCart(
-    //         userId,
-    //         props.cartId,
-    //         totalPrice || props.total_price
-    //       )
-    //     }
-    //     className="absolute right-4 top-4"
-    //   >
-    //     <AiFillDelete className="text-4xl glow" />
-    //   </button>
-    //   <div className="w-full cursor-pointer h-[70%]">
-    //     <img
-    //       className=" h-full mx-auto "
-    //       onClick={clickHandler}
-    //       src={props.image}
-    //       alt=""
-    //     />
-    //   </div>
-    //   <div className=" absolute bottom-8 flex flex-col items-center w-[70%]">
-    //     <p className="text-2xl mb-4 cursor-pointer" onClick={clickHandler}>
-    //       {props.name}
-    //     </p>
-    //     <p className="text-2xl mb-4">
-    //       N
-    //       {totalPrice
-    //         ? splitNumber(totalPrice)
-    //         : splitNumber(props.total_price)}
-    //     </p>
-    //     <div className="flex w-full justify-around items-center">
-    //       <button
-    //         className={`glow-border p-2 flex items-center justify-center`}
-    //         onClick={decreaseCartHandler}
-    //         disabled={currentCount === 0}
-    //       >
-    //         <AiOutlineMinus className="text-2xl" />
-    //       </button>
-    //       <p className="text-2xl">{currentCount}</p>
-    //       <button
-    //         className={`glow-border  flex items-center justify-center p-2`}
-    //         onClick={increaseCartHandler}
-    //       >
-    //         <MdAdd className="text-2xl" />
-    //       </button>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
 

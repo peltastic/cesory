@@ -1,4 +1,3 @@
-import classes from "../styles/button.module.css";
 import { ReactNode } from "react";
 import { FiArrowRight } from "react-icons/fi";
 type Button = {

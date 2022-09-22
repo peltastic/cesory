@@ -22,8 +22,6 @@ import { RootState } from "../../redux/store";
 import { AiOutlineMinus } from "react-icons/ai";
 import Messages from "../../components/Messages";
 import Button from "../../components/Button";
-import Filter from "../../components/Filter";
-import Image from "next/image";
 import Loader from "../../components/Loader";
 import Featured from "../../components/Featured";
 
@@ -233,13 +231,13 @@ function Description({}: Props) {
           </div>
         </div>
       ) : (
-        <div className="flex w-full mt-[15rem] justify-center">
-          <Loader class="w-[20rem] h-[15rem] mr-20" />
-          <div className="flex flex-col">
-            <Loader class="w-[20rem] mb-5 h-[2rem]" />
+        <div className="flex flex-wrap w-full mt-[15rem] justify-center">
+          <Loader class="w-[80%] sm:w-[60%] md:w-[20rem] h-[20rem] md:h-[15rem] mr-20 mb-8 md:mb-0"  />
+          <div className="flex w-[80%] sm:w-[60%] md:w-auto  flex-col">
+            <Loader class="w-[60%] md:w-[20rem] mb-5 h-[2rem]" />
             <Loader class="w-[15rem] mb-10 h-[2rem]" />
             <Loader class="w-[15rem] mb-20 h-[2rem]" />
-            <div className=" flex items-center">
+            <div className=" w-[100%] md:w-auto flex items-center justify-center">
               <Loader class="w-[10rem] mr-8 h-[2rem]" />
               <Loader class="w-[10rem] h-[2rem]" />
             </div>

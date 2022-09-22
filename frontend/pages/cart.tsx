@@ -83,10 +83,10 @@ function Carts({}: Props) {
         disabled={!!checkout}
         className={`text-white text-2xl z-[50] rounded-full ${classes.Glow} bg-[#000] fixed px-10 py-6 right-6 bottom-7`}
       >
-        Checkout {splitNumber(checkout)}
+        Checkout $ {splitNumber(checkout)}
       </button>
 
-      <div className={` mt-[10rem] w-[50%] mx-[5rem]`}>
+      <div className={` mt-[10rem] w-[80%] bp3:w-[50%] mx-[1rem] sm:mx-[5rem]`}>
         {cartData.length > 0 ? (
           <div className="flex flex-wrap justify-start w-full">
             {cartData.map((item, index) => {

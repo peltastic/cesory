@@ -7,7 +7,6 @@ import classes from "../styles/products.module.css";
 import Filter from "../components/Filter";
 import Search from "../components/Search";
 import { AiOutlineSearch } from "react-icons/ai";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 export type Filter = {
   category: string;
