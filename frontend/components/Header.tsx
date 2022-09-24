@@ -6,7 +6,7 @@ import Link from "next/link";
 function Header() {
   return (
     <header className=" h-[90vh] mt-[1rem] md:mt-[5rem] rounded-3xl bg-gradient-to-br from-[#cacaca] to-[#ebebeb]">
-      <div className="w-full px-[4rem] bp6:px-[8rem] bp2:px-[15rem]  center -mt-[3rem] md:mt-[3rem]">
+      <div className="w-full px-[4rem] bp6:px-[8rem] bp2:px-[15rem]  center -mt-[1rem] md:mt-[3rem]">
         <h2 className="mb-6 font-bold  text-2xl md:text-[1.2rem] bp1:text-2xl  text-primary">
           GET
         </h2>
