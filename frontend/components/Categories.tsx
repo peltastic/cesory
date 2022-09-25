@@ -36,7 +36,7 @@ const Categories = () => {
               </Link>
             </div>
           </div>
-          <div className="text-white relative xs:ml-4 xs:my-0 my-3 w-full xs:w-[51%] bp2:w-[48%] bg-gradient-to-br from-[#efc408] to-[#ffd000]  rounded-3xl h-[30rem]">
+          <div data-aos="zoom-in" className="text-white relative xs:ml-4 xs:my-0 my-3 w-full xs:w-[51%] bp2:w-[48%] bg-gradient-to-br from-[#efc408] to-[#ffd000]  rounded-3xl h-[30rem]">
             <div className="w-[20rem] absolute right-[2rem]">
               <Image src={WatchesImg} />
             </div>
@@ -57,7 +57,7 @@ const Categories = () => {
             </div>
           </div>
         </div>
-        <div className="relative w-full bg-gradient-to-br from-[#cacaca] to-[#ebebeb] rounded-3xl h-[30rem]">
+        <div data-aos="zoom-in" className="relative w-full bg-gradient-to-br from-[#cacaca] to-[#ebebeb] rounded-3xl h-[30rem]">
           <div className="w-[20rem] absolute right-[5rem] sm:right-[10rem] bottom-[3rem]">
             <Image src={GamingImg} />
           </div>
@@ -100,7 +100,7 @@ const Categories = () => {
           </div>
         </div>
         <div className="w-full flex flex-wrap xs:flex-nowrap">
-          <div className="relative my-3 xs:my-0 text-white bp2:mr-4 w-full xs:w-[51%] bp2:w-[48%] bg-gradient-to-br  from-[#03c806] to-[#03ab069f] rounded-3xl h-[30rem]">
+          <div data-aos="zoom-in" className="relative my-3 xs:my-0 text-white bp2:mr-4 w-full xs:w-[51%] bp2:w-[48%] bg-gradient-to-br  from-[#03c806] to-[#03ab069f] rounded-3xl h-[30rem]">
             <div className="w-[20rem] absolute right-[0rem] top-[2rem]">
               <Image src={HeadphoneImg} />
             </div>
@@ -120,7 +120,7 @@ const Categories = () => {
               </Link>
             </div>
           </div>
-          <div className="text-white my-3 xs:my-0 relative xs:ml-4 w-full xs:w-[48%] bg-gradient-to-br from-[#2565c6] to-[#3873cb] rounded-3xl h-[30rem]">
+          <div data-aos="zoom-in" className="text-white my-3 xs:my-0 relative xs:ml-4 w-full xs:w-[48%] bg-gradient-to-br from-[#2565c6] to-[#3873cb] rounded-3xl h-[30rem]">
             <div className="w-[20rem] absolute right-[1rem] top-[1rem]">
               <Image src={SpeakerImg} />
             </div>
