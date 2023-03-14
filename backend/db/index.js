@@ -7,26 +7,16 @@ const CartModels = require("./models/cart.model");
 const CheckoutModels = require("./models/checkout.model");
 const dbConfig = require("../config/db");
 
-
-// const sequelize = new Sequelize("tech_store", "postgres", dbConfig.PASSOWRD, {
-//   host: "localhost",
-//   dialect: "postgres",
-// });
-const sequelize = new Sequelize(
-  dbConfig.DB_DRIVER || "database",
-  dbConfig.DB_USER || "postgres",
-  dbConfig.DB_PASSWORD || "yourpassword",
-  {
-    host: dbConfig.DB_HOST || "localhost",
-    dialect: "postgres",
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false, // <<<<<<< YOU NEED THIS
-      },
+const sequelize = new Sequelize(dbConfig.POSTGRES_URL, {
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false, // <<<<<<< YOU NEED THIS
     },
-  }
-);
+  },
+});
+
 const User = UserModels.User(sequelize, DataTypes);
 const Product = ProductModels.Products(sequelize, DataTypes);
 const Order = OrderModels.Order(sequelize, DataTypes);
